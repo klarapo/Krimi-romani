@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krimi knjige</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- container sadrži sav sadržaj web stranice -->
+        <!-- navigacija -->
+        <nav class="navbar">
+            <div class="navbar__container">
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span><span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="index.html" class="navbar__links" id="home-page">O krimićima</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="predstavnici.html" class="navbar__links" id="about-page">Predstavnici</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="kontakt.html" class="navbar__links" id="menu-page">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- kraj navigacije -->
+
+        <!-- header sadrži ilustraciju kriminalističkog mjesta -->
+        <div class="header">
+            <img src="./slike/header.png">
+        </div>
+        <!-- kraj headera -->
+
+       
+        <div class="content">
+            <h3>Kontakt</h3> 
+            <!-- kontakt forma-->
+            <form>
+                <label for="ime">Ime:</label><br>
+                <input type="text" id="ime" name="ime"><br>
+                <label for="prezime">Prezime:</label><br>
+                <input type="text" id="prezime" name="prezime"><br>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="polje">Upit:</label><br>
+                <textarea id="polje" name="polje" rows="4" cols="50">
+                    
+                </textarea><br>
+                
+                <input type="submit" value="Posalji">
+            </form>
+            <!-- kraj kontakt forme -->
+            
+        </div>
+        <div class="footer">
+            <p><span class="copyright">&copy;</span> 2021.</p>
+        </div>
+    </div>
+</body>
+</html>
