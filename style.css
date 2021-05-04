@@ -83,7 +83,7 @@ body{
         margin: 5px auto;
         transition: all 0.3s ease-in-out;
         background: #fff;
-        align: center;
+        align-items: center;
     }
 
     .navbar__item {
@@ -108,6 +108,8 @@ body{
         cursor: pointer;
     }
 }
+
+
 /*kraj navigacije*/
 
 /*header slika*/
@@ -123,6 +125,22 @@ img{
     margin-left: auto;
     margin-right: auto;
 }
+
+@media screen and (max-width: 480px) {
+    .header {
+        position: relative;
+        max-width: 940px;
+    }
+    
+    img{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 /*kraj headera*/
 
 .content {
