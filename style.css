@@ -16,8 +16,8 @@ body{
 
 /*navigacija*/
 .navbar__container {
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
     height: 60px;
     width: 100%;
     max-width: 940px;
@@ -25,19 +25,21 @@ body{
   }
 
   .navbar__menu {
-    float: right;
+    display: flex;
+    align-items: center;
     list-style: none;
   }
   
   .navbar__item {
-    align-content: center;
-    display: inline-block;
-    padding: 20px;
+    height: 80px;
     font-size: 18px;
   }
   
   .navbar__item a {
     color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 125px;
     text-decoration: none;
     height: 100%;
@@ -51,7 +53,8 @@ body{
 /*responzivnost navigacije*/
 @media screen and (max-width: 960px) {
     .navbar__container {
-        position: relative;
+        display: flex;
+        justify-content: space-between;
         height: 60px;
         width: 100%;
         max-width: 940px;
@@ -63,7 +66,7 @@ body{
         grid-template-columns: auto;
         margin: 0;
         width: 100%;
-        position: relative;
+        position: absolute;
         opacity: 1;
         transition: all 0.5s ease;
     }
@@ -98,7 +101,7 @@ body{
     }
 
     #mobile-menu {
-        position: relative;
+        position: absolute;
         top: 20%;
         transform: translate(5%, 20%);
     }
@@ -114,37 +117,41 @@ body{
 
 /*header slika*/
 .header {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
     max-width: 940px;
 }
 
 img{
     width: 100%;
     height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 @media screen and (max-width: 480px) {
     .header {
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
         max-width: 940px;
     }
     
     img{
         width: 100%;
         height: auto;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
 /*kraj headera*/
 
 .content {
-    position: relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:left;
     padding-bottom: 40px;
     width: 940px;
     height: auto;
@@ -155,6 +162,7 @@ img{
     font-family:'Helvetica';
     font-style: normal;
     font-weight: bold;
+    justify-content:left;
     font-size: 20px;
     color: #134880;
     padding: 20px;
@@ -164,6 +172,7 @@ img{
     font-family:'Helvetica';
     font-style: normal;
     font-weight: bold;
+    text-align: left;
     font-size: 24px;
     color: #134880;
     padding: 20px;
@@ -180,7 +189,11 @@ img{
 
 @media screen and (max-width:480px){
     content{
-        position: relative;
+        display:flex;
+        flex-direction: column;
+        justify-content:left;
+        justify-content: center;
+        margin: 0 auto;
         width: 480px;
     }
     .content p{
@@ -190,22 +203,29 @@ img{
 
 /*Predstavnici*/
 .p1__poe{
-    display:inline-block;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
     margin-bottom: 10px;
 }
 
 #poe__slika{
+    display: flex;
+    align-content: flex-start;
     padding-left: 30px;
     width: 20%;
-    float: left;
+    
 }
 
 #poe__text{
-    float: right;
+    display:flex;
+    align-content: flex-end;
     width: 680px;
 }
 #poe__naslov{
-    float:left;
+    display:flex;
+    order: -1;
+    flex: 1 0 100%;
     font-family:'Helvetica';
     font-style: normal;
     font-weight: bold;
@@ -214,23 +234,30 @@ img{
 }
 
 .p2__doyle{
-    display: inline-block;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 #doyle__slika{
+    display: flex;
+    align-content: flex-start;
     padding-right: 30px;
     width: 20%;
     float: right;
 }
 
 #doyle__text{
-    float: left;
+    display:flex;
+    align-content: flex-end;
     width: 650px;
 }
 #doyle__naslov{
-    float:left;
+    display:flex;
+    order: -1;
+    flex: 1 0 100%;
     font-family:'Helvetica';
     font-style: normal;
     font-weight: bold;
@@ -239,23 +266,29 @@ img{
 }
 
 .p3__agatha{
-    display:inline-block;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
     margin-top: 20px;
 }
 
 #agatha__slika{
+    display: flex;
+    align-content: flex-start;
     padding-left: 30px;
     padding-top: 70px;
     width: 20%;
-    float: left;
 }
 
 #agatha__text{
-    float: right;
+    display:flex;
+    align-content: flex-end;
     width: 680px;
 }
 #agatha__naslov{
-    float:left;
+    display:flex;
+    order: -1;
+    flex: 1 0 100%;
     font-family:'Helvetica';
     font-style: normal;
     font-weight: bold;
@@ -271,11 +304,22 @@ ul{
 ul li{
     font-size: 16px;
 }
+
+/*responzivnost - predstavnici*/
+@media only screen and (max-width:480px){
+    .p1__poe, .p2__doyle, .p3__agatha
+    {
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction:column;
+        margin-bottom: 10px;
+    }
+  }
 /*Kraj predstavnika*/
 
 /*footer*/
 .footer{
-    position: relative;
+    display: flex;
     width: 940px;
     height: 50px;
     background-color: #09235e;
@@ -288,7 +332,7 @@ ul li{
     padding: 14px 16px;
     font-size: 18px;
 }
-@media screen and (max-width:480px){
+@media only screen and (max-width:480px){
     .footer p{
       margin:0 auto;
       padding: 10px;
