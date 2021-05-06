@@ -347,7 +347,7 @@ form{
 }
 
 input[type=text]{
-    width: 50%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -355,7 +355,7 @@ input[type=text]{
     border-radius: 4px;
 }
 input[type=email]{
-    width: 50%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -364,7 +364,7 @@ input[type=email]{
 }
 
 textarea{
-    width: 50%;
+    width: 100;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
