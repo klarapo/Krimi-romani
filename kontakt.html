@@ -11,24 +11,24 @@
     <div class="container">
         <!-- container sadrži sav sadržaj web stranice -->
         <!-- navigacija -->
-        <nav class="navbar">
-            <div class="navbar__container">
-                <div class="navbar__toggle" id="mobile-menu">
-                    <span class="bar"></span><span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul class="navbar__menu">
-                    <li class="navbar__item">
-                        <a href="./index.html" class="navbar__links" id="home-page">O krimićima</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="./predstavnici.html" class="navbar__links" id="about-page">Predstavnici</a>
-                    </li>
-                    <li class="navbar__item">
-                        <a href="./kontakt.html" class="navbar__links" id="menu-page">Kontakt</a>
-                    </li>
-                </ul>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <a href="./index.html" class="logo"><i class="fas fa-book"></i></a>
+
+            <div class="nav-btn">
+              <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
             </div>
+            
+            <div class="nav-links">
+                <a href="./index.html">O krimićima</a>
+                <a href="./predstavnici.html">Predstavnici</a>
+                <a href="./kontakt.html">Kontakt</a>
+            </div>
+          </div>
         </nav>
         <!-- kraj navigacije -->
 
