@@ -9,7 +9,7 @@ body{
 .container {
     position: relative;
     overflow: hidden;
-    width: 940px;
+    max-width: 1940px;
     height: auto;
     box-shadow: 0px 0px 18px 18px grey;
 }
@@ -18,9 +18,8 @@ body{
 .navbar__container {
     display: flex;
     justify-content: space-between;
-    height: 60px;
+    height: 80px;
     width: 100%;
-    max-width: 940px;
     background-color:#134880;
   }
 
@@ -32,7 +31,7 @@ body{
   
   .navbar__item {
     height: 80px;
-    font-size: 18px;
+    font-size: 20px;
   }
   
   .navbar__item a {
@@ -55,9 +54,8 @@ body{
     .navbar__container {
         display: flex;
         justify-content: space-between;
-        height: 60px;
+        height: 80px;
         width: 100%;
-        max-width: 940px;
         padding: 0;
     }
     
@@ -113,6 +111,7 @@ body{
 }
 
 
+
 /*kraj navigacije*/
 
 /*header slika*/
@@ -122,7 +121,7 @@ body{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    max-width: 940px;
+    max-width: 1940px;
 }
 
 img{
@@ -137,7 +136,6 @@ img{
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        max-width: 940px;
     }
     
     img{
@@ -153,7 +151,7 @@ img{
     flex-direction:column;
     justify-content:left;
     padding-bottom: 40px;
-    width: 940px;
+    max-width: 1940px;
     height: auto;
     background-color: lavender;
 }
@@ -194,7 +192,7 @@ img{
         justify-content:left;
         justify-content: center;
         margin: 0 auto;
-        width: 480px;
+        width: 100%;
     }
     .content p{
         font-size: 14px;
@@ -320,8 +318,8 @@ ul li{
 /*footer*/
 .footer{
     display: flex;
-    width: 940px;
-    height: 50px;
+    max-width: 1940px;
+    height: 80px;
     background-color: #09235e;
 }
 
@@ -329,8 +327,8 @@ ul li{
     text-align: center;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
-    font-size: 18px;
+    padding: 25px 14px 10px 0px;
+    font-size: 20px;
 }
 @media only screen and (max-width:480px){
     .footer p{
@@ -343,11 +341,11 @@ ul li{
 
 /*Forma za kontakt*/
 form{
-    padding-left: 30px;
+    align-content: center;
 }
 
 input[type=text]{
-    width: 100%;
+    width: 120%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -355,7 +353,7 @@ input[type=text]{
     border-radius: 4px;
 }
 input[type=email]{
-    width: 100%;
+    width: 120%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -364,7 +362,7 @@ input[type=email]{
 }
 
 textarea{
-    width: 100;
+    width: 120%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -386,4 +384,23 @@ input[type=submit]{
 input[type=submit]:hover{
     background-color: #134880;
 }
+
+/*responzivnost forme*/
+@media only screen and (max-width:480px){
+    form{
+        align-content: center;
+        width: 100%;
+        margin-top: 0;
+    }
+    
+    input[type=text],input[type=email],textarea{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 4px;
+    }
+}
+
 /*kraj forme za kontakt*/
