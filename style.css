@@ -11,7 +11,6 @@ body{
     overflow: hidden;
     max-width: 1940px;
     height: auto;
-    box-shadow: 0px 0px 18px 18px grey;
 }
 
 /*navigacija*/
@@ -30,55 +29,55 @@ body{
     position: relative;
   }
   
-  .nav .nav-btn {
+  .nav .nav__btn {
     display: none;
   }
   
-  .nav .nav-links {
+  .nav .nav__links {
     display: inline;
     float: right;
     font-size: 18px;
     padding: 15px;
   }
   
-  .nav .nav-links a {
+  .nav .nav__links a {
     display: inline-block;
     padding: 13px 10px 13px 10px;
     text-decoration: none;
     color: #efefef;
   }
   
-  .nav .nav-links a:hover {
+  .nav .nav__links a:hover {
     background-color: rgba(0, 0, 0, 0.3);
   }
   
-  .nav > #nav-check {
+  .nav > #nav__check {
     display: none;
   }
   
   @media (max-width:600px) {
-    .nav .nav-btn {
+    .nav .nav__btn {
       display: inline-block;
       position: absolute;
       right: 0px;
       top: 0px;
     }
-    .nav .nav-btn label {
+    .nav .nav__btn label {
       display: inline-block;
       width: 50px;
       height: 50px;
       padding: 13px;
     }
-    .nav .nav-btn label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    .nav .nav__btn label:hover,.nav  #nav__check:checked ~ .nav__btn > label {
       background-color: rgba(0, 0, 0, 0.3);
     }
-    .nav .nav-btn label span {
+    .nav .nav__btn label span {
       display: block;
       width: 25px;
       height: 10px;
       border-top: 2px solid #eee;
     }
-    .nav .nav-links {
+    .nav .nav__links {
       position: absolute;
       display: block;
       width: 100%;
@@ -89,14 +88,14 @@ body{
       top: 50px;
       left: 0px;
     }
-    .nav .nav-links > a {
+    .nav .nav__links > a {
       display: block;
       width: 100%;
     }
-    .nav #nav-check:not(:checked) ~ .nav-links {
+    .nav #nav__check:not(:checked) ~ .nav__links {
       height: 0px;
     }
-    .nav #nav-check:checked ~ .nav-links {
+    .nav #nav__check:checked ~ .nav__links {
       height: calc(100vh - 50px);
       overflow-y: auto;
     }
@@ -116,12 +115,13 @@ body{
     max-width: 1940px;
 }
 
-img{
+.header__img{
     width: 100%;
     height: auto;
+    box-shadow: 0px 8px 3px -3px grey;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width:600px) {
     .header {
         display: flex;
         flex-direction: column;
@@ -177,7 +177,7 @@ img{
     padding: 0px 40px 0px 40px;
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:600px){
     content{
         display:flex;
         flex-direction: column;
@@ -296,13 +296,15 @@ ul li{
 }
 
 /*responzivnost - predstavnici*/
-@media only screen and (max-width:480px){
-    .p1__poe, .p2__doyle, .p3__agatha
+@media only screen and (max-width:600px){
+    .p1__poe, .p2__doyle, .p3__agatha,
+    #poe__text,#doyle__text,#agatha__text
     {
         display:flex;
         flex-wrap: wrap;
         flex-direction:column;
         margin-bottom: 10px;
+        font-size: 14px;
     }
   }
 /*Kraj predstavnika*/
@@ -312,6 +314,7 @@ ul li{
     display: flex;
     max-width: 1940px;
     height: 80px;
+    padding-top: 15px;
     background-color: #09235e;
 }
 
@@ -319,10 +322,9 @@ ul li{
     text-align: center;
     color: #f2f2f2;
     text-align: center;
-    padding: 25px 14px 10px 0px;
     font-size: 20px;
 }
-@media only screen and (max-width:480px){
+@media only screen and (max-width:600px){
     .footer p{
       margin:0 auto;
       padding: 10px;
@@ -378,7 +380,7 @@ input[type=submit]:hover{
 }
 
 /*responzivnost forme*/
-@media only screen and (max-width:480px){
+@media only screen and (max-width:600px){
     form{
         align-content: center;
         width: 100%;
