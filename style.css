@@ -110,14 +110,13 @@ body{
 /*header slika*/
 .header {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
     min-width: 1200px;
 }
 
 .header__img{
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: auto;
     box-shadow: 0px 8px 3px -3px grey;
@@ -127,13 +126,12 @@ body{
 @media (min-width: 768px) and (max-width: 991.98px){
     .header {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         margin: 0 auto;
     }
     
     img{
+        justify-content: center;
+        align-items: center;
         width: 100%;
         height: auto;
     }
@@ -142,9 +140,8 @@ body{
 /*kraj headera*/
 
 .content {
-    display:flex;
-    flex-direction:column;
-    justify-content:left;
+    display:block;
+    overflow: hidden;
     padding-bottom: 40px;
     min-width: 1200px;
     height: auto;
@@ -157,7 +154,7 @@ body{
     font-weight: bold;
     display: block;
     margin: auto;
-    font-size: 20px;
+    font-size: 28px;
     color: #134880;
     padding: 30px 10px 15px 10px;
 }
@@ -167,7 +164,7 @@ body{
     font-style: normal;
     font-weight: bold;
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     color: #134880;
     padding: 30px 10px 15px 10px;
 }
@@ -184,6 +181,7 @@ body{
     margin-left: 20px;
     margin-right: 20px;
     min-height: 400px;
+    min-width: 1200px;
 
 }
 #wrapper__firstBlock{
@@ -215,7 +213,9 @@ body{
 #content__secondBlock{
     display:flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
+    padding: 20px 40px;
+    min-width: 1200px;
     text-align: left;
     background-color: #134880;
 }
@@ -241,8 +241,6 @@ body{
 
 #secondBlock__left #secondBlock__text{
     max-width: 900px;
-    display: flex;
-    flex-direction: column;
     justify-content: left;
 }
 #secondBlock__left p{
@@ -258,8 +256,6 @@ body{
 
 #secondBlock__right #secondBlock__img{
     max-width: 50%;
-    display: flex;
-    flex-direction: column;
     justify-content: right;
 }
 #content__secondBlock blockquote{
@@ -408,6 +404,14 @@ body{
 }
 
 @media screen and (min-width:1200px){
+    #content__firstBlock{
+        max-width: 100%;
+    }
+    #wrapper__firstBlock{
+        display:block;
+        margin: 5px;
+        justify-content: center;
+    }
     #content__secondBlock{
         display: block;
         max-width: 100%;
@@ -428,11 +432,9 @@ body{
   }
   
   @media (min-width: 758px) and (max-width: 991.98px){
-    content{
-        display:flex;
-        flex-direction: column;
-        justify-content:left;
-        justify-content: center;
+    .content{
+        display:block;
+        overflow: hidden;
         margin: 0 auto;
         width: 100%;
     }
@@ -444,10 +446,10 @@ body{
     
     #wrapper__secondBlock, #wrapperfourthBlock{
         display:flex;
-        flex-wrap: wrap;
         flex-direction:column;
+        justify-content: center;
         margin-bottom: 10px;
-        font-size: 14px;
+        font-size: 20px;
         padding: 10px;
     }
     
@@ -466,7 +468,7 @@ body{
     #content__fourthBlock{
         display: block;
         max-width: 100%;
-        margin-top: 10px;
+        margin-top: 5px;
     }
     #fourthBlock__right #fourthBlock__img{
         max-width: 90%;
@@ -478,16 +480,14 @@ body{
 
     #content__firstBlock p, #content__secondBlock p, 
     #content__forthBlock p, #content__fifthBlock p{
-        padding: 0px 10px 0px 10px;
+        padding: 0px 5px 0px 5px;
     }
 }
 
 @media (min-width: 576px) and (max-width: 757.98px){
-    content{
-        display:flex;
-        flex-direction: column;
-        justify-content:left;
-        justify-content: center;
+    .content{
+        display:block;
+        overflow: hidden;
         margin: 0 auto;
         width: 100%;
     }
@@ -496,10 +496,10 @@ body{
         margin-top: 5px;
     }
     
-    #wrapper__secondBlock,#content__fourthBlock{
+    #wrapper__secondBlock,#wrapper__fourthBlock{
         display:flex;
-        flex-wrap: wrap;
         flex-direction:column;
+        justify-content: center;
         margin-bottom: 10px;
         font-size: 14px;
         padding: 5px;
@@ -525,14 +525,19 @@ body{
 
 /*Predstavnici*/
 
-.section{
+#writer1, #writer2, #writer3{
     display: block;
+    overflow: hidden;
+    min-height: 650px;
     margin-left: 50px;
     margin-right: 50px;
 }
 
 .p1__poe{
-    margin-bottom: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #poe__img{
@@ -542,15 +547,22 @@ body{
 
 #poe__text{
     max-width: 800px;
-    float: right;
 }
 #poe__title{
     font-family:'Helvetica';
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 28px;
     color: #134880;
     margin-left: 30px;
+}
+.p1__poe p{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 36px;
+    padding: 0px 40px 0px 40px;
 }
 
 /*2 pisac doyle*/
@@ -558,34 +570,41 @@ body{
     background-color: #134880;
 }
 
-#writer2 h3 {
+#writer2 h3{
     font-family:'Helvetica';
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 28px;
     color: #eee;
     margin-left: 30px;
 }
 
+#writer1 h3,#writer3 h3 {
+    font-family:'Helvetica';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    color: #134880;
+    margin-left: 30px;
+}
+
 .p2__doyle{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: row;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
     align-items: center;
 }
 
 .p2__doyle #doyle__text{
     max-width: 800px;
-    
 }
 .p2__doyle p{
     color: #eee;
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 26px;
+    line-height: 36px;
     padding: 0px 40px 0px 40px;
 }
 
@@ -594,7 +613,6 @@ body{
 }
 
 .btn__more{
-    margin-top: 10px;
     border: none;
     background-color: #09235e;
     color: white;
@@ -602,9 +620,8 @@ body{
     text-align: center;
     border-radius: 10px;
     padding: 10px 20px 10px 20px;
+    margin: 0 0 40px 40px;
     text-decoration: none;
-    margin-bottom: 10px;
-    margin-top: 10px;
 }
 
 .btn__more:hover{
@@ -612,7 +629,6 @@ body{
 }
 
 .btn__more__gray{
-    margin: 10px 10px;
     float: left;
     border: none;
     background-color: #eee;
@@ -631,7 +647,11 @@ body{
 }
 
 .p3__agatha{
-    margin-top: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #agatha__img{
@@ -641,16 +661,16 @@ body{
 
 #agatha__text{
     max-width: 800px;
-    float: right;
 }
-#agatha__title{
-    font-family:'Helvetica';
+.p3__agatha p{
+    font-family: 'Helvetica';
     font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    color: #134880;
-    margin-left: 30px;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 36px;
+    padding: 0px 40px 0px 40px;
 }
+
 
 ul{
     list-style-type: circle;
@@ -663,10 +683,9 @@ ul li{
 
 /*responzivnost - predstavnici*/
 
-@media only screen and (max-width:960px){
+@media only screen and (max-width:768px){
     .p1__poe, .p2__doyle, .p3__agatha,
-    #poe__text,#doyle__text,#agatha__text
-    {
+    #poe__text,#doyle__text,#agatha__text{
         display:flex;
         flex-wrap: wrap;
         flex-direction:column;
@@ -674,20 +693,27 @@ ul li{
         font-size: 14px;
         padding: 10px;
     }
+    
+    #writer1 h3,#writer2 h3,#writer3 h3{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
     #poe__img, #doyle__img, #agatha__img{
         max-width: 30%;
         padding: 10px;
+        display: block;
+        margin: auto;
     }
 
     #writer1,#writer2,#writer3{
         display: block;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .btn__more{
-        width: 20%;
-        margin-bottom: 10px;
-        margin-top: 10px;
+    
+    .btn__more, .btn__more__gray{
+        align-items: center;
     }
     
 }
@@ -695,7 +721,7 @@ ul li{
 
 
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:576px){
     .p1__poe, .p2__doyle, .p3__agatha,
     #poe__text,#doyle__text,#agatha__text
     {
@@ -704,6 +730,7 @@ ul li{
         flex-direction:column;
         margin-bottom: 10px;
         font-size: 14px;
+        padding: 0px 5px 0px 5px;
     }
     #poe__img, #doyle__img, #agatha__img{
         max-width: 50%;
@@ -713,6 +740,7 @@ ul li{
 
 
 /*Kraj predstavnika*/
+
 
 /*footer*/
 .footer{
@@ -729,7 +757,7 @@ ul li{
     text-align: center;
     font-family:'Helvetica';
     font-style: normal;
-    font-size: 20px;
+    font-size: 30px;
 }
 @media only screen and (max-width:600px){
     .footer p{
@@ -745,7 +773,7 @@ ul li{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1940px;
+    min-width: 1200px;
     height: auto;
     padding: 20px;
     background-color: lavender;
@@ -756,7 +784,7 @@ ul li{
     font-style: normal;
     font-weight: bold;
     justify-content:center;
-    font-size: 20px;
+    font-size: 28px;
     color: #134880;
     padding: 30px 10px 15px 10px;
 }
@@ -833,3 +861,124 @@ input[type=submit]:hover{
 }
 
 /*kraj forme za kontakt*/
+
+/* vise o piscima*/
+.content__author__more{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:center;
+  align-content: center;
+}
+
+/*- carousel*/
+#slider{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+	overflow: hidden;
+  max-width: 400px;
+  padding-top: 30px;
+}
+#slider figure{
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 15s slider infinite;
+}
+#slider figure img{
+	width: 20%;
+	float: left;
+}
+
+@keyframes slider{
+	0% {
+		left: 0;
+	}
+	20% {
+		left: 0;
+	}
+	25% {
+		left: -100%;
+	}
+	45% {
+		left: -100%;
+	}
+	50% {
+		left: -200%;
+	}
+	70% {
+		left: -200%;
+	}
+	75% {
+		left: -300%;
+	}
+	95% {
+		left: -300%;
+	}
+	100% {
+		left: -400%;
+	}
+}
+  
+
+  .author__more__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 2600px;
+
+  }
+  .author__more__text2{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    max-width: 1600px;
+
+  }
+  .author__more__text h2{
+    font-family:'Helvetica';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: #134880;
+    margin-left: 30px;
+}
+
+.author__more__text p,.author__more__text2 p{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 36px;
+    padding: 0px 40px 0px 40px;
+}
+.btn__read{
+    float: left;
+    border: none;
+    max-width: 160px;
+    background-color: #134880;
+    color:#eee;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    margin: 0 0 40px 40px;
+    text-decoration: none;
+}
+
+.btn__read:hover{
+    background-color: lightgray;
+    color: #eee;
+}
+
+@media only screen and (max-width:600px){
+  .content__author__more{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content:center;
+    align-content: center;
+  }
+}
