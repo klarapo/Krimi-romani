@@ -9,7 +9,7 @@ body{
 .container {
     position: relative;
     overflow: hidden;
-    min-width: 1200px;
+    width: 100%;
     height: auto;
 }
 
@@ -119,7 +119,7 @@ body{
 .header {
     display: flex;
     margin: 0 auto;
-    min-width: 1200px;
+    width: 100%;
 }
 
 .header__img{
@@ -145,13 +145,14 @@ body{
     }
 }
 
+
 /*kraj headera*/
 
 .content {
     display:block;
     overflow: hidden;
     padding-bottom: 40px;
-    min-width: 1200px;
+    max-width: 100%;
     height: auto;
     background-color: lavender;
 }
@@ -189,7 +190,7 @@ body{
     margin-left: 20px;
     margin-right: 20px;
     min-height: 400px;
-    min-width: 1200px;
+    width: 100%;
 
 }
 #wrapper__firstBlock{
@@ -222,8 +223,9 @@ body{
     display:flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
     padding: 20px 40px;
-    min-width: 1200px;
+    width: 100%;
     text-align: left;
     background-color: #134880;
 }
@@ -270,7 +272,7 @@ body{
     font-family: Georgia, serif;
     font-size: 30px;
     font-style: italic;
-    min-width: 1200px;
+    width: 100%;
     margin: 0.25em 0;
     padding: 20px 40px;
     line-height: 1.45;
@@ -284,7 +286,7 @@ body{
     justify-content: center;
     text-align: center;
     padding: 20px 40px;
-    min-width: 1200px;
+    width: 100%;
     min-height: 400px;
 }
 
@@ -420,8 +422,13 @@ body{
         margin: 5px;
         justify-content: center;
     }
+    #wrapper__firstBlock p{
+        columns: auto 1;
+    }
+    
     #content__secondBlock{
         display: block;
+        overflow: hidden;
         max-width: 100%;
         padding: 5px 10px 5px 10px;
     }
@@ -503,19 +510,20 @@ body{
     #wrapper__firstBlock{
         margin-top: 5px;
     }
-    
+    #content__secondBlock{
+        overflow: hidden;
+    }
     #wrapper__secondBlock,#wrapper__fourthBlock{
         display:flex;
         flex-direction:column;
         justify-content: center;
-        margin-bottom: 10px;
         font-size: 14px;
-        padding: 5px;
       }
     #icon__attribute{
-        padding: 40px;
         font-size: 50px;
+        max-height: auto;
     }
+    
     #secondBlock__right #secondBlock__img,
     #fourthBlock__right #fourthBlock__img{
         max-width: 80%;
@@ -523,6 +531,11 @@ body{
     
     #wrapper__thirdBlock{
         grid-template-columns: 1fr;
+    }
+    #thirdBlock__icon{
+        margin: 20px;
+        max-width: auto;
+        min-height: auto;
     }
 
     #content__firstBlock p, #content__secondBlock p, 
@@ -538,7 +551,7 @@ body{
     flex-direction: column;
     justify-content: center;
     padding: 10px 20px;
-    min-width: 1200px;
+    width: 100%;
     text-align: left;
 }
 
@@ -579,7 +592,7 @@ body{
     font-weight: bold;
     font-size: 28px;
     color: #eee;
-    margin-left: 30px;
+    text-align: center;
 }
 
 #writer1 h3,#writer3 h3 {
@@ -588,7 +601,7 @@ body{
     font-weight: bold;
     font-size: 28px;
     color: #134880;
-    margin-left: 30px;
+    text-align: center;
 }
 
 #writer2{
@@ -596,7 +609,7 @@ body{
     flex-direction: column;
     justify-content: center;
     padding: 10px 20px;
-    min-width: 1200px;
+    width: 100%;
     text-align: left;
     background-color: #134880;
 }
@@ -629,18 +642,15 @@ body{
     justify-content: right;
 }
 
-
 .btn__more{
-    justify-content: right;
     border: none;
-    max-width: 90px;
     background-color: #09235e;
     color: white;
-    font-size: 16px;
+    font-size: 24px;
     text-align: center;
     border-radius: 10px;
     padding: 10px 20px 10px 20px;
-    margin: 0 0 40px 40px;
+    margin: 20px 0 40px 40px;
     text-decoration: none;
 }
 
@@ -654,7 +664,7 @@ body{
     max-width: 90px;
     background-color: #eee;
     color:#134880;
-    font-size: 16px;
+    font-size: 24px;
     text-align: center;
     border-radius: 10px;
     padding: 10px 20px 10px 20px;
@@ -706,6 +716,10 @@ body{
         font-size: 14px;
         padding: 5px;
       }
+      
+    #p2__doyle__right #doyle__img{
+        margin-top: 20px;
+    }
 }
 
 
@@ -718,7 +732,7 @@ body{
 /*footer*/
 .footer{
     display: flex;
-    min-width: 1200px;
+    width: 100%;
     height: 80px;
     padding-top: 15px;
     background-color: #09235e;
@@ -746,7 +760,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 1200px;
+    width: 100%;
     height: auto;
     padding: 20px;
     background-color: lavender;
@@ -768,12 +782,12 @@ body{
     max-width: auto;
 }
 form{
-    align-content: center;
+    min-width: 100%;
+    min-height: 680px;
 }
 
 input[type=text]{
-    min-width: 1000px;
-    min-height: 65px;
+    min-width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -781,8 +795,7 @@ input[type=text]{
     border-radius: 4px;
 }
 input[type=email]{
-    min-width: 1000px;
-    min-height: 65px;
+    min-width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -791,8 +804,7 @@ input[type=email]{
 }
 
 textarea{
-    min-width: 1000px;
-    min-height: 500px;
+    min-width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -823,14 +835,12 @@ label{
 /*responzivnost forme*/
 @media only screen and (max-width:600px){
     form{
-        align-content: center;
         max-width: 90%;
-        max-height: auto;
         margin-top: 0;
     }
     
     input[type=text],input[type=email],textarea{
-        width: 90%;
+        max-width: 90%;
         padding: 12px 20px;
         margin: 8px 0;
         box-sizing: border-box;
