@@ -14,19 +14,19 @@ body{
 }
 
 /*navigacija*/
-  .logo{
+.logo{
     color: #eee;
     padding: 20px;
     float: left;
     display: block;
-    font-size: 50px;
+    font-size: 30px;
 }
   
   .nav {
-    height: 100px;
+    height: 80px;
     width: 100%;
     background-color: #09235e;
-    position: fixed;
+    position: relative;
   }
   
   .nav .nav__btn {
@@ -36,10 +36,8 @@ body{
   .nav .nav__links {
     display: inline;
     float: right;
-    font-family:'Helvetica';
-    font-style: normal;
     font-size: 30px;
-    padding: 15px;
+    padding: 15px 15px 0 15px;
   }
   
   .nav .nav__links a {
@@ -48,24 +46,16 @@ body{
     text-decoration: none;
     color: #efefef;
   }
-  .nav .nav__links a:visited {
-    background-color: rgba(88, 88, 88, 0.3);
-  }  
+  
   .nav .nav__links a:hover {
     background-color: rgba(0, 0, 0, 0.3);
   }
-  .nav .nav__links a:active {
-    background-color: rgba(0, 0, 0, 0.3);
-    text-decoration: underline;
-  }
-  
-
   
   .nav > #nav__check {
     display: none;
   }
   
-  @media (min-width: 576px) and (max-width: 757.98px){
+  @media (max-width:600px) {
     .nav .nav__btn {
       display: inline-block;
       position: absolute;
@@ -75,7 +65,7 @@ body{
     .nav .nav__btn label {
       display: inline-block;
       width: 50px;
-      height: 70px;
+      height: 50px;
       padding: 13px;
     }
     .nav .nav__btn label:hover,.nav  #nav__check:checked ~ .nav__btn > label {
@@ -189,13 +179,11 @@ body{
 #content__firstBlock{
     padding: 40px 40px;
     min-height: 400px;
-    width: 100%;
 
 }
 #wrapper__firstBlock{
     display:block;
     margin: 20px;
-    justify-content: center;
 }
 
 #content__firstBlock p {
@@ -473,7 +461,7 @@ body{
 
 }
 
-@media (min-width: 576px) and (max-width: 757.98px){
+@media only screen and (max-width: 757.98px){
     .content{
         display:block;
         overflow: hidden;
@@ -531,6 +519,10 @@ body{
     #content__secondBlock h3,#content__thirdBlock h3,
     #content__fourthBlock h3,#content__fifthBlock h3{
         font-size: 24px;
+    }
+    
+    #content__secondBlock blockquote{
+        font-size: 18px;
     }
 }
 
@@ -694,9 +686,28 @@ body{
     #p3__agatha__right p{
         font-size: 20px;
     }
+    #p1__poe__left #poe__img,
+    #p2__doyle__right #doyle__img,
+    #p3__agatha__left #agatha__img{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #wrapper__btnMore,#wrapper__btnMoreGray{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    #wrapper__btnMoreGray{
+        margin: auto;
+    }
+
+    .btn__more,.btn__more__gray{
+        font-size: 20px;       
+        padding: 5px 10px 5px 10px;
+    }
 }
 
-@media (min-width: 576px) and (max-width: 757.98px){
+@media only screen and (max-width: 757.98px){
     .content{
         display:block;
         overflow: hidden;
@@ -713,11 +724,11 @@ body{
         margin-bottom: 10px;
         font-size: 14px;
         padding: 5px;
-      }
+    }
       
-      #p1__poe__left #poe__img,
-      #p2__doyle__right #doyle__img,
-      #p3__agatha__left #agatha__img{
+    #p1__poe__left #poe__img,
+    #p2__doyle__right #doyle__img,
+    #p3__agatha__left #agatha__img{
         margin-top: 20px;
         margin-bottom: 20px;
     }
