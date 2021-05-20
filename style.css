@@ -468,7 +468,9 @@ body{
     #content__firstBlock p, #content__secondBlock p, 
     #content__forthBlock p, #content__fifthBlock p{
         padding: 0px 5px 0px 5px;
+        font-size: 20px;
     }
+
 }
 
 @media (min-width: 576px) and (max-width: 757.98px){
@@ -520,6 +522,15 @@ body{
     #content__firstBlock p, #content__secondBlock p, 
     #content__forthBlock p, #content__fifthBlock p{
         padding: 0px 5px 0px 5px;
+        font-size: 16px;
+    }
+    #content__firstBlock h2{
+        font-size: 26px;
+    }
+    
+    #content__secondBlock h3,#content__thirdBlock h3,
+    #content__fourthBlock h3,#content__fifthBlock h3{
+        font-size: 24px;
     }
 }
 
@@ -863,7 +874,7 @@ label{
     }
     
     label{
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 
@@ -989,5 +1000,11 @@ label{
     flex-direction: column;
     justify-content:center;
     align-content: center;
+  }
+  .author__more__text p,.author__more__text2 p{
+      font-size: 16px;
+  }
+  .author__more__text h2{
+      font-size: 24px;
   }
 }
