@@ -26,7 +26,7 @@ body{
     height: 80px;
     width: 100%;
     background-color: #09235e;
-    position: relative;
+    position: sticky;
   }
   
   .nav .nav__btn {
@@ -34,10 +34,8 @@ body{
   }
   
   .nav .nav__links {
-    display: inline;
     float: right;
     font-size: 30px;
-    padding: 15px 15px 0 15px;
   }
   
   .nav .nav__links a {
@@ -54,8 +52,11 @@ body{
   .nav > #nav__check {
     display: none;
   }
-  
-  @media (max-width:600px) {
+
+  @media only screen and (max-width:767.98px) {
+    .nav{
+        position: relative;
+    }
     .nav .nav__btn {
       display: inline-block;
       position: absolute;
@@ -84,7 +85,7 @@ body{
       background-color: #134880;
       height: 0px;
       transition: all 0.3s ease-in;
-      overflow-y: hidden;
+      overflow-x: hidden;
       top: 50px;
       left: 0px;
     }
@@ -168,14 +169,6 @@ body{
     padding: 30px 10px 15px 10px;
 }
 
-.content p {
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 26px;
-    padding: 0px 40px 0px 40px;
-}
 #content__firstBlock{
     padding: 40px 40px;
     min-height: 400px;
@@ -186,7 +179,7 @@ body{
     margin: 20px;
 }
 
-#content__firstBlock p {
+#wrapper__firstBlock p {
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: normal;
@@ -268,6 +261,7 @@ body{
    flex-wrap: wrap;
    justify-content: center;
    align-items: center;
+   margin: 20px;
 }
 
 #thirdBlock__icon{
@@ -333,6 +327,7 @@ body{
 }
 
 #wrapper__fourthBlock p{
+    margin-top: 40px;
     color: #eee;
     font-family: 'Helvetica';
     font-style: normal;
@@ -384,25 +379,24 @@ body{
         margin: 5px;
         justify-content: center;
     }
+    #wrapper__secondBlock,#wrapper__thirdBlock,
+    #wrapper__fourthBlock,#wrapper__fifthBlock{
+        margin: 5px;
+    }
     
-    #content__secondBlock{
+    
+    #content__secondBlock,
+    #content__fourthBlock{
         display: block;
         overflow: hidden;
         max-width: 100%;
         padding: 5px 10px 5px 10px;
     }
-    #secondBlock__right #secondBlock__img{
-        max-width: 70%;
-    }
-    
-    #content__fourthBlock{
-        display: block;
-        max-width: 100%;
-        padding: 5px 10px 5px 10px;
-    }
+    #secondBlock__right #secondBlock__img,
     #fourthBlock__right #fourthBlock__img{
         max-width: 70%;
     }
+    
   }
   
   @media (min-width: 758px) and (max-width: 991.98px){
@@ -418,14 +412,14 @@ body{
         margin-bottom: 10px;
     }
     
-    #wrapper__secondBlock, #wrapperfourthBlock{
+    #wrapper__secondBlock, #wrapper__fourthBlock{
         display:flex;
         flex-direction:column;
         justify-content: center;
         align-items: center;
         margin-bottom: 10px;
         font-size: 20px;
-        padding: 10px;
+        margin-top: 10px;
     }
     
     #content__secondBlock blockquote{
@@ -436,26 +430,14 @@ body{
         padding: 40px;
         font-size: 70px;
     }
-    #secondBlock__right #secondBlock__img{
-        max-width: 90%;
-    }
-    
-    #content__fourthBlock{
-        display: block;
-        max-width: 100%;
-        margin-top: 5px;
-    }
+    #secondBlock__right #secondBlock__img,
     #fourthBlock__right #fourthBlock__img{
         max-width: 90%;
-    }
-    
-    #wrapper__thirdBlock{
-        grid-template-columns: 1fr 1fr;
     }
 
     #content__firstBlock p, #content__secondBlock p, 
     #content__forthBlock p, #content__fifthBlock p{
-        padding: 0px 5px 0px 5px;
+        padding: 0px 10px 0px 10px;
         font-size: 20px;
     }
 
@@ -468,6 +450,11 @@ body{
         margin: auto;
         width: 100%;
     }
+    #content__firstBlock, #content__secondBlock, 
+    #content__thirdBlock, #content__fourthBlock, 
+    #content__fifthBlock{
+        padding: 5px 5px;
+    }
     
     #wrapper__firstBlock{
         margin-top: 5px;
@@ -479,6 +466,7 @@ body{
         justify-content: center;
         align-items: center;
         font-size: 16px;
+        margin-top: 5px;
       }
     
     #wrapper__secondBlock #secondBlock__img,
@@ -507,22 +495,28 @@ body{
         min-height: auto;
     }
 
-    #content__firstBlock p, #content__secondBlock p, 
-    #content__forthBlock p, #content__fifthBlock p{
-        padding: 0px 5px 0px 5px;
+    #wrapper__firstBlock p, #wrapper__secondBlock p, 
+    #wrapper__fourthBlock p, #wrapper__fifthBlock p{
         font-size: 16px;
+        line-height: 26px;
+        padding: 0px 5px 0px 5px;
+        margin-top: 15px;
+
     }
     #content__firstBlock h2{
         font-size: 26px;
+        padding: 25px 10px 0 10px;
     }
     
     #content__secondBlock h3,#content__thirdBlock h3,
     #content__fourthBlock h3,#content__fifthBlock h3{
         font-size: 24px;
+        padding: 25px 10px 0 10px;
     }
     
     #content__secondBlock blockquote{
         font-size: 18px;
+        padding: 0 0 15px 0;
     }
 }
 
@@ -530,20 +524,19 @@ body{
 /*poe & agatha*/
 #writer1, #writer3{
     display:block;
-    padding: 40px 40px;
 }
 
 #wrapper__writer1,#wrapper__writer3{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 20px;
 }
 
 #p1__poe__left #poe__img,
 #p3__agatha__left #agatha__img{
     max-width: 100%;
+    margin: 20px 0;
 }
 
 #p1__poe__right #poe__text,
@@ -557,7 +550,6 @@ body{
     font-weight: normal;
     font-size: 26px;
     line-height: 36px;
-    padding: 0px 40px 0px 40px;
 }
 
 /*2 pisac doyle*/
@@ -586,7 +578,6 @@ body{
 
 #writer2{
     display:block;
-    padding: 40px 40px;
     background-color: #134880;
 }
 
@@ -594,8 +585,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 20px;
 }
 
 
@@ -609,14 +599,14 @@ body{
     font-weight: normal;
     font-size: 26px;
     line-height: 36px;
-    padding: 0px 40px 0px 40px;
 }
 
 #p2__doyle__right #doyle__img{
     max-width: 100%;
+    margin: 20px 0;
 }
 
-#wrapper__btnMore{
+#wrapper__btnMore,#wrapper__btnMoreGray{
     margin-top: 20px;
 }
 .btn__more{
@@ -627,15 +617,12 @@ body{
     text-align: center;
     border-radius: 10px;
     padding: 10px 20px 10px 20px;
-    margin: 20px 0 40px 40px;
+    margin: 0 0 40px 40px;
     text-decoration: none;
 }
 
 .btn__more:hover{
     background-color: #134880;
-}
-#wrapper__btnMoreGray{
-    margin-top: 20px;
 }
 
 .btn__more__gray{
@@ -674,13 +661,14 @@ body{
         justify-content: center;
         margin-bottom: 10px;
         font-size: 20px;
-        padding: 5px;
     }
     #wrapper__writer1 h3,#wrapper__writer2 h3,
     #wrapper__writer3 h3{
         display:block;
         margin: auto;
         font-size: 24px;
+        margin-bottom: auto;
+        margin-left: 30px;
     }
     #p1__poe__right p,#p2__doyle__left p,
     #p3__agatha__right p{
@@ -697,13 +685,9 @@ body{
         padding-bottom: 5px;
     }
     
-    #wrapper__btnMoreGray{
-        margin: auto;
-    }
 
     .btn__more,.btn__more__gray{
         font-size: 20px;       
-        padding: 5px 10px 5px 10px;
     }
 }
 
@@ -723,7 +707,6 @@ body{
         align-items: center;
         margin-bottom: 10px;
         font-size: 14px;
-        padding: 5px;
     }
       
     #p1__poe__left #poe__img,
@@ -741,6 +724,7 @@ body{
     #p1__poe__right p,#p2__doyle__left p,
     #p3__agatha__right p{
         font-size: 16px;
+        line-height: 26px;
     }
 
     #wrapper__btnMore,#wrapper__btnMoreGray{
@@ -749,12 +733,12 @@ body{
     }
     
     #wrapper__btnMoreGray{
-        margin: auto;
+        margin-top: 20px;
     }
 
     .btn__more,.btn__more__gray{
-        font-size: 18px;       
-        padding: 5px 10px 5px 10px;
+        font-size: 18px;
+        margin: auto;       
     }
 }
 
@@ -870,6 +854,12 @@ label{
 
 /*responzivnost forme*/
 @media only screen and (max-width:600px){
+    .content__contact{
+        padding: 5px;
+    }
+    .form__wrapper{
+        max-width: 90%;
+    }
     form{
         max-width: 90%;
         margin-top: 0;
@@ -877,7 +867,7 @@ label{
     
     input[type=text],input[type=email],textarea{
         max-width: 90%;
-        padding: 12px 20px;
+        padding: 5px 10px;
         margin: 8px 0;
         box-sizing: border-box;
         border: none;
@@ -886,6 +876,9 @@ label{
     
     label{
         font-size: 16px;
+    }
+    input[type=submit]{
+        font-size: 20px;  
     }
 }
 
@@ -1014,8 +1007,12 @@ label{
   }
   .author__more__text p,.author__more__text2 p{
       font-size: 16px;
+      line-height: 26px;
   }
   .author__more__text h2{
       font-size: 24px;
+  }
+  .btn__read{
+    font-size: 20px;  
   }
 }
