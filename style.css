@@ -26,7 +26,7 @@ body{
     height: 80px;
     width: 100%;
     background-color: #09235e;
-    position: sticky;
+    position: fixed;
   }
   
   .nav .nav__btn {
