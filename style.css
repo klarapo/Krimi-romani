@@ -54,6 +54,9 @@ body{
   }
 
   @media only screen and (max-width:767.98px) {
+    .logo{
+    padding: 10px;
+    }
     .nav{
         position: relative;
     }
@@ -251,7 +254,7 @@ body{
 #content__thirdBlock{
     display:block;
     text-align: center;
-    padding: 40px 40px;
+    padding: 40px 0;
     width: 100%;
     min-height: 400px;
 }
@@ -259,20 +262,22 @@ body{
 #wrapper__thirdBlock{
    display: flex;
    flex-wrap: wrap;
-   justify-content: center;
+   justify-content: space-evenly;
    align-items: center;
    margin: 20px;
 }
 
-#thirdBlock__icon{
+.thirdBlock__icon{
    margin: 10px;
    max-width: auto;
-   min-height: 400px;
    border-radius: 4px;
    display: flex;
    flex-direction: column;
    justify-content: center;
-   color: #fff;
+   color: #134880;
+   padding: 20px;
+   display: block;
+   font-size: 100px;
 }
 
 #content__thirdBlock p {
@@ -294,12 +299,6 @@ body{
     font-size: 28px;
     color: #134880;
     padding: 30px 10px 15px 10px;
-}
-#icon__attribute{
-    color: #134880;
-    padding: 20px;
-    display: block;
-    font-size: 100px;
 }
 
 #content__fourthBlock{
@@ -432,9 +431,12 @@ body{
         font-size: 24px;
     }
 
-    #icon__attribute{
+    .thirdBlock__icon{
         padding: 40px;
         font-size: 70px;
+    }
+    #content__thirdBlock p {
+        font-size: 20px;
     }
     #secondBlock__right #secondBlock__img,
     #fourthBlock__right #fourthBlock__img{
@@ -481,9 +483,11 @@ body{
         padding-top: 10px;
         padding-bottom: 10px;
     }
-    #icon__attribute{
+    .thirdBlock__icon{
         font-size: 50px;
+        padding: 40px;
         max-height: auto;
+        max-width: auto;
     }
     
     #secondBlock__right #secondBlock__img,
@@ -494,11 +498,6 @@ body{
     #wrapper__thirdBlock{
         display: flex;
         flex-direction: column;
-    }
-    #thirdBlock__icon{
-        margin: 20px;
-        max-width: auto;
-        min-height: auto;
     }
 
     #wrapper__firstBlock p, #wrapper__secondBlock p, 
@@ -536,7 +535,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 20px;
+    margin: 50px 20px;
 }
 
 #p1__poe__left #poe__img,
@@ -566,7 +565,7 @@ body{
     font-weight: bold;
     font-size: 28px;
     color: #eee;
-    text-align: left;
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -576,7 +575,7 @@ body{
     font-weight: bold;
     font-size: 28px;
     color: #134880;
-    text-align: left;
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -589,7 +588,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 20px;
+    margin: 50px 20px;
 }
 
 
@@ -769,7 +768,7 @@ body{
     font-style: normal;
     font-size: 30px;
 }
-@media only screen and (max-width:600px){
+@media only screen and (max-width: 757.98px){
     .footer p{
       margin:0 auto;
       padding: 10px;
@@ -793,7 +792,7 @@ body{
     font-family:'Helvetica';
     font-style: normal;
     font-weight: bold;
-    justify-content:center;
+    text-align:center;
     font-size: 28px;
     color: #134880;
     padding: 30px 10px 15px 10px;
@@ -856,18 +855,55 @@ label{
 }
 
 /*responzivnost forme*/
-@media only screen and (max-width:600px){
+@media (min-width: 758px) and (max-width: 991.98px){
     .content__contact{
         padding: 5px;
     }
-    .form__wrapper{
-        max-width: 90%;
+    .content__contact h3 {
+        font-size: 24px;
     }
+    
     form{
-        max-width: 90%;
+        min-width: 700px;
+        max-height: 600px;
         margin-top: 0;
     }
     
+    .form__wrapper{
+        max-width: 90%;
+    }
+    
+    input[type=text],input[type=email],textarea{
+        max-width: 90%;
+        padding: 5px 10px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 4px;
+    }
+    
+    label{
+        font-size: 20px;
+    }
+    input[type=submit]{
+        font-size: 24px;  
+    }
+}
+
+@media only screen and (max-width: 757.98px){
+    .content__contact{
+        padding: 5px;
+    }
+    form{
+        max-width: 757.98px;
+        max-height: 600px;
+        margin: auto;
+    }
+    
+    .form__wrapper{
+        max-width: 90%;
+    }
+
     input[type=text],input[type=email],textarea{
         max-width: 90%;
         padding: 5px 10px;
@@ -881,7 +917,8 @@ label{
         font-size: 16px;
     }
     input[type=submit]{
-        font-size: 20px;  
+        font-size: 18px;
+        margin: auto; 
     }
 }
 
@@ -1001,7 +1038,7 @@ label{
     color: #eee;
 }
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width: 757.98px){
   .content__author__more{
     display: flex;
     flex-direction: column;
