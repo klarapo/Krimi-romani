@@ -407,6 +407,12 @@ body{
         width: 100%;
     }
     
+    #content__firstBlock, #content__secondBlock, 
+    #content__thirdBlock, #content__fourthBlock, 
+    #content__fifthBlock{
+        padding: 15px 5px;
+    }
+    
     #wrapper__firstBlock{
         margin-top: 5px;
         margin-bottom: 10px;
@@ -436,7 +442,7 @@ body{
     }
 
     #content__firstBlock p, #content__secondBlock p, 
-    #content__forthBlock p, #content__fifthBlock p{
+    #content__fourthBlock p, #content__fifthBlock p{
         padding: 0px 10px 0px 10px;
         font-size: 20px;
     }
@@ -662,13 +668,11 @@ body{
         margin-bottom: 10px;
         font-size: 20px;
     }
-    #wrapper__writer1 h3,#wrapper__writer2 h3,
-    #wrapper__writer3 h3{
+    #p1__poe__right h3,#p2__doyle__left h3,
+    #p3__agatha__right h3{
         display:block;
         margin: auto;
         font-size: 24px;
-        margin-bottom: auto;
-        margin-left: 30px;
     }
     #p1__poe__right p,#p2__doyle__left p,
     #p3__agatha__right p{
@@ -687,7 +691,8 @@ body{
     
 
     .btn__more,.btn__more__gray{
-        font-size: 20px;       
+        font-size: 20px;
+        margin: auto;          
     }
 }
 
@@ -716,8 +721,8 @@ body{
         margin-bottom: 20px;
     }
 
-    #wrapper__writer1 h3,#wrapper__writer2 h3,
-    #wrapper__writer3 h3{
+    #p1__poe__right h3,#p2__doyle__left h3,
+    #p3__agatha__right h3{
         text-align: center;
         font-size: 20px;
     }
