@@ -535,7 +535,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 50px 20px;
+    padding: 70px;
 }
 
 #p1__poe__left #poe__img,
@@ -565,8 +565,9 @@ body{
     font-weight: bold;
     font-size: 28px;
     color: #eee;
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
+    padding-left: 0;
 }
 
 #p1__poe__right h3,#p3__agatha__right h3 {
@@ -575,8 +576,9 @@ body{
     font-weight: bold;
     font-size: 28px;
     color: #134880;
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
+    padding-left: 0;
 }
 
 #writer2{
@@ -588,7 +590,7 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 50px 20px;
+    padding: 70px;
 }
 
 
@@ -610,7 +612,7 @@ body{
 }
 
 #wrapper__btnMore,#wrapper__btnMoreGray{
-    margin-top: 20px;
+    padding-top: 30px;
 }
 .btn__more{
     border: none;
@@ -648,7 +650,14 @@ body{
 
 
 /*responzivnost - predstavnici*/
-  
+@media (min-width: 992px) and (max-width: 1300px){
+    #p1__poe__right, #p3__agatha__right{
+        margin-left: 60px;
+    }
+    #p2__doyle__left{
+        margin-right: 60px;
+    }
+}
 @media (min-width: 758px) and (max-width: 991.98px){
     .content{
         display:block;
@@ -664,6 +673,7 @@ body{
         justify-content: center;
         margin-bottom: 10px;
         font-size: 20px;
+        padding: 50px;
     }
     #p1__poe__right h3,#p2__doyle__left h3,
     #p3__agatha__right h3{
@@ -689,7 +699,7 @@ body{
 
     .btn__more,.btn__more__gray{
         font-size: 20px;
-        margin: auto;          
+        margin-top: auto;         
     }
 }
 
@@ -709,6 +719,7 @@ body{
         align-items: center;
         margin-bottom: 10px;
         font-size: 14px;
+        padding: 30px;
     }
       
     #p1__poe__left #poe__img,
@@ -730,7 +741,7 @@ body{
     }
 
     #wrapper__btnMore,#wrapper__btnMoreGray{
-        padding-top: 5px;
+        padding-top: 25px;
         padding-bottom: 5px;
     }
     
@@ -1003,6 +1014,7 @@ label{
     font-family:'Helvetica';
     font-style: normal;
     font-weight: bold;
+    text-align: left;
     font-size: 30px;
     color: #134880;
     margin-left: 30px;
@@ -1037,6 +1049,12 @@ label{
     background-color: lightgray;
     color: #eee;
 }
+@media (min-width: 992px) and (max-width: 1300px){
+  .author__more__text2 h2,author__more__text h2{
+    font-size: 24px;
+    text-align: left;
+    }
+}
 
 @media only screen and (max-width: 757.98px){
   .content__author__more{
@@ -1049,10 +1067,12 @@ label{
       font-size: 16px;
       line-height: 26px;
   }
-  .author__more__text h2{
+  .author__more__text2 h2,.author__more__text h2{
       font-size: 24px;
+      text-align: center;
   }
   .btn__read{
     font-size: 20px;  
   }
+  
 }
