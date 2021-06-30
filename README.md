@@ -1,5 +1,5 @@
 # Krimi romani
-Zadatak u sklopu studentske prakse u Adricom d.o.o. 
+Zadatak u sklopu studentske prakse.
   
 ## SPECIFICATIONS:
   
